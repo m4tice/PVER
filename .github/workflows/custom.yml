@@ -58,11 +58,9 @@ jobs:
 
     - name: Clean up
       run: |
-        del /q ./BC/temp/*
-        rd /s /q /BC/temp/
+        rm -rf BC/temp/
         
-        del /q ./BC/_out/*
-        rd /s /q ./BC/_out/
+        rm -rf BC/_out/
 
     - name: push changes to PVER remote
       run: |
