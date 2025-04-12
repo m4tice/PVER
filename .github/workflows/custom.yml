@@ -31,7 +31,8 @@ jobs:
         mkdir _out
         mkdir temp
         cd ..
-        ls
+    
+    - run: ls
 
     - name: copy extract from PVER to BC\_temp
       run: |
