@@ -48,7 +48,7 @@ jobs:
     
     - name: copy generated ecucvalues from BC/_out to /Conf/BC
       run: |
-        cp "./BC/_out/ecucvalues.py" "./Conf/BC/ecucvalues.py"
+        cp "./BC/_out/ecucvalues.py" "Conf/BC/ecucvalues.py"
 
     - name: Clean up
       run: |
