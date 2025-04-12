@@ -11,6 +11,12 @@ jobs:
         organization: ["m4tice"]
     steps:
     - uses: actions/checkout@v4
+    
+    - name: setup git credentials
+      run: |
+        git config --global user.name "m4tice"
+        git config --global user.email "ductuan2908@gmail.com"
+
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
       with:
@@ -46,9 +52,9 @@ jobs:
 
     - run: ls BC/_out
     
-    - name: copy generated ecucvalues from BC/_out to /Conf/BC
+    - name: copy generated ecucvalues from BC/_out to /Conf/BCC
       run: |
-        cp "./BC/_out/ecucvalues.py" "Conf/BC/ecucvalues.py"
+        cp "./BC/_out/ecucvalues.py" "Conf/BCC/ecucvalues.py"
 
     - name: Clean up
       run: |
@@ -60,7 +66,7 @@ jobs:
 
     - name: push changes to PVER remote
       run: |
-        git add Conf/BC; git commit -m "update: auto-generated ecucvalues file"
+        git add Conf/BCC; git commit -m "update: auto-generated ecucvalues file"
         git push
         
     # - name: Analysing the code with pylint
