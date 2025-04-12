@@ -40,7 +40,7 @@ jobs:
 
     - name: Run generator
       run: |
-        python comsclappl_generate.py
+        python ./BC/comsclappl_generate.py
 
     - name: copy extract from PVER to BC/_temp
       run: |
