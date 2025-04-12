@@ -42,9 +42,9 @@ jobs:
       run: |
         python ./BC/comsclappl_generate.py
 
-    - run: ls BC
+    - run: ls BC/_out
     
-    - name: copy extract from PVER to BC/_temp
+    - name: copy generated ecucvalues from BC/_out to /Conf/BC
       run: |
         cp "./BC/_out/ecucvalues.py" "./Conf/BC/ecucvalues.py"
 
