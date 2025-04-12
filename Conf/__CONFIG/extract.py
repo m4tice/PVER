@@ -28,6 +28,11 @@ model = {
         "ESP_21" : {
             "Length" : 8,
             "ID" : 0x21,
+        },
+
+        "MUX_09" : {
+            "Length" : 8,
+            "ID" : 0x09,
         }
     }
 }
