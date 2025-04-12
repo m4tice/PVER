@@ -40,7 +40,9 @@ jobs:
 
     - name: Run generator
       run: |
-        python ./BC/comsclappl_generate.py
+        cd BC
+        python comsclappl_generate.py
+        cd ..
 
     - run: ls BC/_out
     
