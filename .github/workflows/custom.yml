@@ -3,8 +3,7 @@ name: Pylint & Tests
 on: [push]
 
 permissions:
-  contents: read
-  pages: write
+  contents: write
 
 jobs:
   build:
@@ -63,7 +62,6 @@ jobs:
     - name: Clean up
       run: |
         rm -rf BC/temp/
-        
         rm -rf BC/_out/
 
     - name: push changes to PVER remote
