@@ -23,6 +23,11 @@ model = {
         "MSG_EMG_01" : {
             "Length" : 8,
             "ID" : 0x10,
+        },
+
+        "ESP_21" : {
+            "Length" : 8,
+            "ID" : 0x21,
         }
     }
 }
