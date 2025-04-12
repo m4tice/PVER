@@ -36,7 +36,7 @@ jobs:
 
     - name: copy extract from PVER to BC\_temp
       run: |
-        cp ".\Conf\__CONFIG\extract.py" ".\BC\temp\extract.py"
+        cp "Conf\__CONFIG\extract.py" "BC\temp\extract.py"
 
     - name: Run generator
       run: |
