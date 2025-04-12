@@ -36,27 +36,27 @@ jobs:
 
     - name: copy extract from PVER to BC\_temp
       run: |
-        cp "Conf\__CONFIG\extract.py" "BC\temp\extract.py"
+        cp "./Conf/__CONFIG/extract.py" "./BC/temp/extract.py"
 
     - name: Run generator
       run: |
         python comsclappl_generate.py
 
-    - name: copy extract from PVER to BC\_temp
+    - name: copy extract from PVER to BC/_temp
       run: |
-        cp ".\BC\_out\ecucvalues.py" ".\Conf\BC\ecucvalues.py"
+        cp "./BC/_out/ecucvalues.py" "./Conf/BC/ecucvalues.py"
 
     - name: Clean up
       run: |
-        del /q .\BC\temp\*
-        rd /s /q temp
+        del /q ./BC/temp/*
+        rd /s /q /BC/temp/
         
-        del /q .\BC\_out\*
-        rd /s /q _out
+        del /q ./BC/_out/*
+        rd /s /q ./BC/_out/
 
     - name: push changes to PVER remote
       run: |
-        git add Conf\BC; git commit -m "update: auto-generated ecucvalues file"
+        git add Conf/BC; git commit -m "update: auto-generated ecucvalues file"
         git push
         
     # - name: Analysing the code with pylint
